@@ -1,5 +1,4 @@
 //EJERCICIO 1
-
 public class ejercicio1 {
 
 
