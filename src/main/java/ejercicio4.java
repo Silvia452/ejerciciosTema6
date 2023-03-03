@@ -7,23 +7,23 @@ public class ejercicio4 {
     }
 
     public static void ovejas(){
-        Scanner teclado = new Scanner(System.in);
+        final Scanner sc = new Scanner(System.in);
         String[] rebano = {">",">",">"," ","<","<","<"};
         String[] ganador= {"<","<","<"," ",">",">",">"};
-        boolean jugando = true;
-        //primerMovimiento(rebano, teclado);
+        boolean salir = true;
+
         do {
             try {
                 mostarRebano(rebano);
-                teclado.nextLine();
-                System.out.println("¿Que peon quiere mover? (0-6) (9 para salir)");
-                int peon = teclado.nextInt();
+                sc.nextLine();
+                System.out.println("¿Que peon quiere mover? (0-6) (Pulse 9 para salir)");
+                int peon = sc.nextInt();
                 if (peon==9 || rebano==ganador) {
                     if (rebano==ganador) {
                         System.out.println("Ganaste");
                     }else{
-                        System.out.println("Saliendo . . .");
-                        jugando = false;
+                        System.out.println("Saliendo del juego ");
+                        salir = false;
                     }
                 }
                 if (peon==0 || peon==1 || peon==5 || peon==6) {
@@ -62,7 +62,7 @@ public class ejercicio4 {
             } catch (ArrayIndexOutOfBoundsException e) {
                 System.out.println("No se puede mover");
             }
-        } while (jugando);
+        } while (salir);
 
     }
 
