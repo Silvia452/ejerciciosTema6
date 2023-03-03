@@ -28,6 +28,7 @@ public class ejercicio3 {
             }
         }
         System.out.println("El mayor valor es: " + mayor);
+        System.out.println();
 
     }
 
